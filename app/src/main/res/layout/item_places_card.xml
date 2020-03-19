@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dim_8dp"
+    app:cardCornerRadius="@dimen/dim_8dp"
+    android:layout_margin="@dimen/dim_8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_200dp"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:background="@color/colorPrimaryLight">
+
+        <TextView
+            android:id="@+id/placeName"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center"
+            android:layout_weight="9"
+            android:text="@string/places"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_32sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height=".05dp"
+            android:layout_marginStart="@dimen/dim_16dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:layout_marginBottom="@dimen/dim_8dp"
+            android:alpha=".5"
+            android:background="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/wordShop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/workshop"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_16sp" />
+
+
+        <TextView
+            android:id="@+id/placesAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="@string/_3rd_street_area_town"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_16sp"
+            android:drawableStart="@drawable/ic_location_home"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

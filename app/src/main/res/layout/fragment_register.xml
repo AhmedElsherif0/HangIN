@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/register_rl_relativeoftoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/register_tl_taplayout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            app:layout_anchorGravity="center" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/register_tl_taplayout"
+            android:layout_alignBottom="@+id/register_tl_taplayout"
+            android:background="@drawable/gradient_splash"
+            >
+
+            <ImageView
+                android:id="@+id/requestDonationFragment_iv_backhome"
+                android:layout_width="@dimen/dim_40dp"
+                android:layout_height="@dimen/dim_40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dim_8dp"
+                android:paddingStart="@dimen/dim_8dp"
+                android:paddingEnd="@dimen/dim_8dp"
+                android:src="@drawable/back_white_24dp" />
+
+            <TextView
+                android:id="@+id/register_tv_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:text="@string/hangin"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/requestDonationFragment_iv_notification"
+                android:layout_width="@dimen/dim_40dp"
+                android:layout_height="@dimen/dim_40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dim_8dp"
+                android:paddingStart="@dimen/dim_8dp"
+                android:paddingEnd="@dimen/dim_8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/appicon" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_til_firstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:layout_marginEnd="@dimen/dim_8dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:hint="@string/first_name"
+        android:textColorHint="@color/colorGray"
+        app:layout_constraintEnd_toStartOf="@+id/register_til_lastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_rl_relativeoftoolbar">
+
+        <EditText
+            android:id="@+id/register_et_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorTitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_til_lastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginStart="@dimen/dim_8dp"
+        android:hint="@string/last_name"
+        android:textColorHint="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/register_til_firstName"
+        app:layout_constraintTop_toBottomOf="@+id/register_rl_relativeoftoolbar">
+
+        <EditText
+            android:id="@+id/register_et_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorTitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_til_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:hint="@string/email"
+        android:textColorHint="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_til_firstName">
+
+        <EditText
+            android:id="@+id/register_et_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorTitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_til_phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:hint="@string/phone_number"
+        android:textColorHint="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_til_Email">
+
+        <EditText
+            android:id="@+id/register_et_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorTitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_til_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_til_phoneNumber">
+
+        <EditText
+            android:id="@+id/register_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorTitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_til_confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_24dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:hint="@string/confirm_password"
+        android:textColorHint="@color/colorGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_til_password">
+
+        <EditText
+            android:id="@+id/register_et_confirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_24sp"
+            android:textColor="@color/colorTitle"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/register_btn_createAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginEnd="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_30dp"
+        android:background="@drawable/back_accent_color"
+        android:text="@string/create_account"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_til_confirmPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
